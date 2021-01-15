@@ -1,24 +1,7 @@
-# vue-supabase-blog
+# Creating a simple Blog using Vue + Supabase
 
-## Project setup
-```
-npm install
-```
+This is a repository created to provide an example of how to create a simple Blog using _Vue + Supabase_.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+You can read more about it on this [blog post](#_).
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+[LICENSE](LICENSE)
