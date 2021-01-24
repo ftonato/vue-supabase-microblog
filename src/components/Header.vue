@@ -8,7 +8,7 @@
           <a href="/" class="w-full py-4 pr-4 md:py-0">
             <span class="text-xl font-black leading-none text-gray-900 select-none logo">
               Vue + Supabase
-              <span class="text-indigo-600">BLOG</span>
+              <span class="text-indigo-600">microblog</span>
             </span>
           </a>
           <div
@@ -35,7 +35,7 @@
           <h1
             class="text-5xl font-extrabold tracking-tight text-left text-gray-900 leading-tightest md:leading-10 md:text-center sm:leading-none md:text-6xl lg:text-7xl"
           >
-            <span class="inline md:block">Creating a simple BLOG using</span>
+            <span class="inline md:block">Creating a microblog using</span>
             <span
               class="relative mt-2 text-transparent md:inline-block bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500"
             >Vue + Supabase</span>
