@@ -25,16 +25,21 @@ export default {
   data: () => ({
     posts: [],
     database: null,
+    subscriptionPosts: undefined,
   }),
   created() {
     const database = new DatabaseService();
     this.database = database.getInstance();
   },
   async mounted() {
-    await this.fetchTodos();
+    await this.fetchPosts();
+    this.subscribePosts();
+  },
+  destroyed() {
+    this.unsubscribePosts();
   },
   methods: {
-    async fetchTodos() {
+    async fetchPosts() {
       let { error, data } = await this.database
         .from("posts")
         .select()
@@ -48,6 +53,19 @@ export default {
     },
     setPosts(posts) {
       this.posts = posts;
+    },
+    subscribePosts() {
+      this.subscriptionPosts = this.database
+        .from("posts")
+        .on("INSERT", (message) => {
+          if (message.new) {
+            this.posts.push(message.new);
+          }
+        })
+        .subscribe();
+    },
+    unsubscribePosts() {
+      this.database.removeSubscription(this.subscriptionPosts);
     },
   },
 };
