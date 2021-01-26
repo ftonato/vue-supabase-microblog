@@ -31,10 +31,10 @@ export default {
     this.database = database.getInstance();
   },
   async mounted() {
-    await this.fetchTodos();
+    await this.fetchPosts();
   },
   methods: {
-    async fetchTodos() {
+    async fetchPosts() {
       let { error, data } = await this.database
         .from("posts")
         .select()
